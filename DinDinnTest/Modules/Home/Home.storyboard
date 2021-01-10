@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Menu Items-->
+        <scene sceneID="DNF-kN-Pa0">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="L48-GJ-OnF" customClass="HomeViewController" customModule="DinDinnTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vVV-sB-pBG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="406" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GS3-OL-oZf">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fBX-bn-uAn">
+                                <rect key="frame" x="319" y="752" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="Lzn-tO-WkX"/>
+                                    <constraint firstAttribute="width" constant="70" id="Mck-6b-dCp"/>
+                                </constraints>
+                                <state key="normal">
+                                    <imageReference key="image" image="shopping_cart_icon" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="35"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.120788628" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="cartButtonAction:" destination="L48-GJ-OnF" eventType="touchUpInside" id="eKB-xP-S7S"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="DMI-4Q-MW6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DMI-4Q-MW6" firstAttribute="bottom" secondItem="fBX-bn-uAn" secondAttribute="bottom" constant="40" id="9yL-SQ-aWH"/>
+                            <constraint firstItem="DMI-4Q-MW6" firstAttribute="trailing" secondItem="GS3-OL-oZf" secondAttribute="trailing" id="Lxd-eZ-Q8m"/>
+                            <constraint firstItem="DMI-4Q-MW6" firstAttribute="trailing" secondItem="fBX-bn-uAn" secondAttribute="trailing" constant="25" id="Wq1-ud-Xdn"/>
+                            <constraint firstItem="GS3-OL-oZf" firstAttribute="top" secondItem="vVV-sB-pBG" secondAttribute="top" id="aQ0-VP-PP4"/>
+                            <constraint firstItem="GS3-OL-oZf" firstAttribute="leading" secondItem="DMI-4Q-MW6" secondAttribute="leading" id="f38-kY-Sxa"/>
+                            <constraint firstItem="DMI-4Q-MW6" firstAttribute="bottom" secondItem="GS3-OL-oZf" secondAttribute="bottom" id="lwq-Ps-TNv"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Menu Items" id="20k-dF-qoe"/>
+                    <connections>
+                        <outlet property="cartButton" destination="fBX-bn-uAn" id="NOG-sw-Ghh"/>
+                        <outlet property="menuItemsTableView" destination="GS3-OL-oZf" id="h6h-qc-8EX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f4D-vX-kgN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="914.49275362318849" y="-54.241071428571423"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="shopping_cart_icon" width="70" height="70"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
