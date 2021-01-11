@@ -6,10 +6,11 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 protocol HomeView: class {
     func loadOffers(offersList: [Offer])
-    func updateMenuItems(with menuItemsList: [Item])
     func updateCartButton(hide: Bool)
 }
 
@@ -19,6 +20,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var menuItemsTableView: UITableView!
     @IBOutlet weak var cartButton: UIButton!
 
+    private let disposeBag = DisposeBag()
     
     private lazy var offersView: OffersView = {
         let header = OffersView()
@@ -27,19 +29,10 @@ class HomeViewController: UIViewController {
         return header
     }()
     
-    private var datasource: [Item] = [] {
-        didSet {
-            if menuItemsTableView.dataSource == nil {
-                menuItemsTableView.dataSource = self
-                menuItemsTableView.delegate = self
-            }
-            menuItemsTableView.reloadData()
-        }
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupTableView()
+        self.bindTableView()
         self.presenter?.viewDidLoad()
     }
     
@@ -47,6 +40,14 @@ class HomeViewController: UIViewController {
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = true
         self.presenter?.viewWillAppear()
+    }
+    
+    private func bindTableView() {
+        self.menuItemsTableView.rx.setDelegate(self).disposed(by: disposeBag)
+        self.presenter?.menuItemsDatasource.bind(to: menuItemsTableView.rx.items(cellIdentifier: MenuItemTableViewCell.identifier, cellType: MenuItemTableViewCell.self)) { (row, item, cell) in
+            cell.configure(with: item)
+            cell.delegate = self
+        }.disposed(by: disposeBag)
     }
 
     private func setupTableView() {
@@ -62,19 +63,7 @@ class HomeViewController: UIViewController {
     }
 }
 
-extension HomeViewController: UITableViewDataSource, UITableViewDelegate, MenuItemTableViewCellDelegate {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return datasource.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: MenuItemTableViewCell.identifier, for: indexPath) as? MenuItemTableViewCell else { return UITableViewCell() }
-        
-        cell.configure(with: self.datasource[indexPath.row])
-        cell.delegate = self
-        return cell
-    }
-    
+extension HomeViewController: UITableViewDelegate, MenuItemTableViewCellDelegate {
     func addToCart(item: Item) {
         self.presenter?.onAddToCart(menuItem: item)
     }
@@ -86,9 +75,9 @@ extension HomeViewController: HomeView {
         self.offersView.configure(offers: offersList)
     }
     
-    func updateMenuItems(with menuItemsList: [Item]) {
-        self.datasource = menuItemsList
-    }
+//    func updateMenuItems(with menuItemsList: [Item]) {
+//        self.datasource = menuItemsList
+//    }
     
     func updateCartButton(hide: Bool) {
         self.cartButton.isHidden = hide

@@ -12,6 +12,8 @@ protocol HomePresentation {
     func viewWillAppear()
     func onPressCartButton()
     func onAddToCart(menuItem: Item)
+    
+    var menuItemsDatasource: PublishSubject<[Item]> { get }
 }
 
 class HomePresenter {
@@ -27,6 +29,7 @@ class HomePresenter {
     private let useCases: UseCases
     private let router: HomeRouting
     
+    private let itemsList = PublishSubject<[Item]>()
     private let disposeBag = DisposeBag()
     
     init(router: HomeRouting, useCases: UseCases) {
@@ -37,6 +40,11 @@ class HomePresenter {
 
 
 extension HomePresenter: HomePresentation {
+    
+    var menuItemsDatasource: PublishSubject<[Item]> {
+        return itemsList
+    }
+    
     func viewDidLoad() {
         self.view?.updateCartButton(hide: true)
         
@@ -54,7 +62,7 @@ extension HomePresenter: HomePresentation {
             .subscribe { [weak self] (menuItemsResult) in
                 guard let menuItemsResult = menuItemsResult else { return }
                 print("menuItemsResult: \(menuItemsResult)")
-                self?.view?.updateMenuItems(with: menuItemsResult)
+                self?.itemsList.onNext(menuItemsResult)
             } onError: { (error) in
                 print("error: \(error.localizedDescription)")
             }.disposed(by: disposeBag)
