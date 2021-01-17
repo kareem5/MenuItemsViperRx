@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1452A10409F835FEB814C7B6 /* Pods_DinDinnTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7758D73EA379FD184867806A /* Pods_DinDinnTest.framework */; };
+		620E12F925B33F74000B1131 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620E12F825B33F74000B1131 /* PageViewController.swift */; };
+		620E12FC25B34432000B1131 /* ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620E12FB25B34432000B1131 /* ChildViewController.swift */; };
+		620E12FF25B34571000B1131 /* RootPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620E12FE25B34571000B1131 /* RootPageViewController.swift */; };
+		623A519225B4DB3E009A82EE /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623A519125B4DB3E009A82EE /* Category.swift */; };
+		623CB8F525AF572300959D50 /* RoundTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623CB8F425AF572300959D50 /* RoundTopView.swift */; };
 		6258A78125A62D8A007C6935 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6258A78025A62D8A007C6935 /* AppDelegate.swift */; };
 		6258A78325A62D8A007C6935 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6258A78225A62D8A007C6935 /* SceneDelegate.swift */; };
 		6258A78A25A62D8B007C6935 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6258A78925A62D8B007C6935 /* Assets.xcassets */; };
 		6258A78D25A62D8B007C6935 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6258A78B25A62D8B007C6935 /* LaunchScreen.storyboard */; };
-		6258A79E25A6364A007C6935 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6258A79D25A6364A007C6935 /* HomeViewController.swift */; };
 		62A7C22425A9BB180027E95A /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A7C22325A9BB180027E95A /* HomePresenter.swift */; };
 		62A7C22725A9BB230027E95A /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A7C22625A9BB230027E95A /* HomeRouter.swift */; };
 		62A7C22A25A9BB2C0027E95A /* HomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A7C22925A9BB2C0027E95A /* HomeBuilder.swift */; };
@@ -51,17 +54,22 @@
 		62A7C3D625AB7C470027E95A /* CartItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A7C3D425AB7C470027E95A /* CartItemTableViewCell.swift */; };
 		62A7C3D725AB7C470027E95A /* CartItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62A7C3D525AB7C470027E95A /* CartItemTableViewCell.xib */; };
 		62A7C3DC25AB8E770027E95A /* Cart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62A7C3DB25AB8E770027E95A /* Cart.storyboard */; };
+		FEC6558EA6B84707DE5B28D8 /* Pods_MenuItemsViperRx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B24E721D00D05928A380691C /* Pods_MenuItemsViperRx.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1BBB0B75777AE607B6D67C16 /* Pods-DinDinnTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DinDinnTest.release.xcconfig"; path = "Target Support Files/Pods-DinDinnTest/Pods-DinDinnTest.release.xcconfig"; sourceTree = "<group>"; };
+		620E12F825B33F74000B1131 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		620E12FB25B34432000B1131 /* ChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildViewController.swift; sourceTree = "<group>"; };
+		620E12FE25B34571000B1131 /* RootPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootPageViewController.swift; sourceTree = "<group>"; };
+		623A519125B4DB3E009A82EE /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		623CB8F425AF572300959D50 /* RoundTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundTopView.swift; sourceTree = "<group>"; };
 		6258A77D25A62D8A007C6935 /* MenuItemsViperRx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MenuItemsViperRx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6258A78025A62D8A007C6935 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6258A78225A62D8A007C6935 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		6258A78925A62D8B007C6935 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6258A78C25A62D8B007C6935 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6258A78E25A62D8B007C6935 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6258A79D25A6364A007C6935 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		62A7C22325A9BB180027E95A /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		62A7C22625A9BB230027E95A /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		62A7C22925A9BB2C0027E95A /* HomeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBuilder.swift; sourceTree = "<group>"; };
@@ -100,7 +108,9 @@
 		62A7C3D425AB7C470027E95A /* CartItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemTableViewCell.swift; sourceTree = "<group>"; };
 		62A7C3D525AB7C470027E95A /* CartItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartItemTableViewCell.xib; sourceTree = "<group>"; };
 		62A7C3DB25AB8E770027E95A /* Cart.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cart.storyboard; sourceTree = "<group>"; };
-		7758D73EA379FD184867806A /* Pods_DinDinnTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DinDinnTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F822C01BB56ADC53BDF9751 /* Pods-MenuItemsViperRx.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MenuItemsViperRx.debug.xcconfig"; path = "Target Support Files/Pods-MenuItemsViperRx/Pods-MenuItemsViperRx.debug.xcconfig"; sourceTree = "<group>"; };
+		B24E721D00D05928A380691C /* Pods_MenuItemsViperRx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MenuItemsViperRx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE40C59C87578D910344DBC6 /* Pods-MenuItemsViperRx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MenuItemsViperRx.release.xcconfig"; path = "Target Support Files/Pods-MenuItemsViperRx/Pods-MenuItemsViperRx.release.xcconfig"; sourceTree = "<group>"; };
 		EAF9A557F62A72BC0F25D935 /* Pods-DinDinnTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DinDinnTest.debug.xcconfig"; path = "Target Support Files/Pods-DinDinnTest/Pods-DinDinnTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,7 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1452A10409F835FEB814C7B6 /* Pods_DinDinnTest.framework in Frameworks */,
+				FEC6558EA6B84707DE5B28D8 /* Pods_MenuItemsViperRx.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,8 +131,30 @@
 			children = (
 				EAF9A557F62A72BC0F25D935 /* Pods-DinDinnTest.debug.xcconfig */,
 				1BBB0B75777AE607B6D67C16 /* Pods-DinDinnTest.release.xcconfig */,
+				6F822C01BB56ADC53BDF9751 /* Pods-MenuItemsViperRx.debug.xcconfig */,
+				DE40C59C87578D910344DBC6 /* Pods-MenuItemsViperRx.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		620E12F625B33EDA000B1131 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				620E12FE25B34571000B1131 /* RootPageViewController.swift */,
+				620E12F825B33F74000B1131 /* PageViewController.swift */,
+				620E12FB25B34432000B1131 /* ChildViewController.swift */,
+				62A7C24725A9C6660027E95A /* CustomViews */,
+				62A7C2B925AAFA150027E95A /* MenuItemCell */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		623CB8F325AF56FC00959D50 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				623CB8F425AF572300959D50 /* RoundTopView.swift */,
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 		6258A77425A62D8A007C6935 = {
@@ -163,9 +195,7 @@
 		6258A79C25A63606007C6935 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				62A7C2B925AAFA150027E95A /* MenuItemCell */,
-				62A7C24725A9C6660027E95A /* CustomViews */,
-				6258A79D25A6364A007C6935 /* HomeViewController.swift */,
+				620E12F625B33EDA000B1131 /* Views */,
 				62A7C22325A9BB180027E95A /* HomePresenter.swift */,
 				62A7C22625A9BB230027E95A /* HomeRouter.swift */,
 				62A7C22925A9BB2C0027E95A /* HomeBuilder.swift */,
@@ -178,6 +208,7 @@
 		62A7C22C25A9BC390027E95A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				623CB8F325AF56FC00959D50 /* CustomViews */,
 				62A7C27025AA14D40027E95A /* APIClient */,
 				62A7C23125A9BD260027E95A /* Extensions */,
 				62A7C22D25A9BC8F0027E95A /* DinDinnStoryboard.swift */,
@@ -223,6 +254,7 @@
 				62A7C26525A9D0980027E95A /* Offer.swift */,
 				62A7C29A25AA25240027E95A /* Item.swift */,
 				62A7C3C625AB6C5B0027E95A /* CartItem.swift */,
+				623A519125B4DB3E009A82EE /* Category.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -309,7 +341,7 @@
 		6B38C74D171894FEB3F3F6D8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7758D73EA379FD184867806A /* Pods_DinDinnTest.framework */,
+				B24E721D00D05928A380691C /* Pods_MenuItemsViperRx.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -402,7 +434,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DinDinnTest-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-MenuItemsViperRx-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -415,15 +447,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DinDinnTest/Pods-DinDinnTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-MenuItemsViperRx/Pods-MenuItemsViperRx-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DinDinnTest/Pods-DinDinnTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-MenuItemsViperRx/Pods-MenuItemsViperRx-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DinDinnTest/Pods-DinDinnTest-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MenuItemsViperRx/Pods-MenuItemsViperRx-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -443,20 +475,24 @@
 				62A7C3C125AB6ADC0027E95A /* CartInteractor.swift in Sources */,
 				62A7C3CA25AB72900027E95A /* CartService.swift in Sources */,
 				62A7C26E25A9D18D0027E95A /* Extensions+UIView.swift in Sources */,
-				6258A79E25A6364A007C6935 /* HomeViewController.swift in Sources */,
 				62A7C22725A9BB230027E95A /* HomeRouter.swift in Sources */,
 				62A7C23825A9BF7E0027E95A /* RootWindow.swift in Sources */,
 				62A7C27225AA14EC0027E95A /* APIClient.swift in Sources */,
 				62A7C24225A9C04B0027E95A /* RootWindowBuilder.swift in Sources */,
 				62A7C3C725AB6C5B0027E95A /* CartItem.swift in Sources */,
 				62A7C29B25AA25240027E95A /* Item.swift in Sources */,
+				623A519225B4DB3E009A82EE /* Category.swift in Sources */,
 				62A7C29325AA1F2F0027E95A /* MenuAPI.swift in Sources */,
 				62A7C22A25A9BB2C0027E95A /* HomeBuilder.swift in Sources */,
 				62A7C26625A9D0980027E95A /* Offer.swift in Sources */,
 				62A7C3B025AB6AB50027E95A /* CartViewController.swift in Sources */,
+				620E12FC25B34432000B1131 /* ChildViewController.swift in Sources */,
 				62A7C2AF25AA2C9C0027E95A /* MenuEndpoint.swift in Sources */,
 				62A7C27625AA17900027E95A /* APIResult.swift in Sources */,
+				620E12FF25B34571000B1131 /* RootPageViewController.swift in Sources */,
+				623CB8F525AF572300959D50 /* RoundTopView.swift in Sources */,
 				62A7C3BE25AB6ACB0027E95A /* CartRouter.swift in Sources */,
+				620E12F925B33F74000B1131 /* PageViewController.swift in Sources */,
 				62A7C26A25A9D1320027E95A /* OfferCollectionViewCell.swift in Sources */,
 				62A7C23E25A9C0140027E95A /* RootWindowRouter.swift in Sources */,
 				62A7C27925AA17FF0027E95A /* APIResponse.swift in Sources */,
@@ -603,7 +639,7 @@
 		};
 		6258A79225A62D8B007C6935 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EAF9A557F62A72BC0F25D935 /* Pods-DinDinnTest.debug.xcconfig */;
+			baseConfigurationReference = 6F822C01BB56ADC53BDF9751 /* Pods-MenuItemsViperRx.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -622,7 +658,7 @@
 		};
 		6258A79325A62D8B007C6935 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1BBB0B75777AE607B6D67C16 /* Pods-DinDinnTest.release.xcconfig */;
+			baseConfigurationReference = DE40C59C87578D910344DBC6 /* Pods-MenuItemsViperRx.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

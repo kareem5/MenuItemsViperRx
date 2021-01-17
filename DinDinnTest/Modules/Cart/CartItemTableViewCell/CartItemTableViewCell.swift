@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 protocol CartItemTableViewCellDelegate: class {
     func didDelete(cartItemWithId id: Int)
@@ -24,7 +26,15 @@ class CartItemTableViewCell: UITableViewCell {
         }
     }
     
+    private var disposeBag = DisposeBag()
+    
     weak var delegate: CartItemTableViewCellDelegate?
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.disposeBag = DisposeBag()
+    }
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

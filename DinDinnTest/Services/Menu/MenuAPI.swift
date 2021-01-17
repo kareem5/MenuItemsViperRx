@@ -12,4 +12,5 @@ protocol MenuAPI {
     
     func fetchOffers() -> Observable<([Offer]?)>
     func fetchMenuItems() -> Observable<([Item]?)>
+    func fetchCategories() -> Observable<([Category]?)>
 }

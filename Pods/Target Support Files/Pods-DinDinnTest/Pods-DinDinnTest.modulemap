@@ -1,6 +1,0 @@
-framework module Pods_DinDinnTest {
-  umbrella header "Pods-DinDinnTest-umbrella.h"
-
-  export *
-  module * { export * }
-}

@@ -13,6 +13,7 @@ struct Item {
     let size: String
     let price: Double
     let imageUrl: String
+    let categoryId: Int
 }
 
 extension Item: Decodable {
@@ -22,6 +23,7 @@ extension Item: Decodable {
         case restaurantId = "restaurant_id"
         case imageUrl = "image_url"
         case weight, size, price
+        case categoryId = "category_id"
     }
     
     init(from decoder: Decoder) throws {
@@ -34,6 +36,7 @@ extension Item: Decodable {
         self.weight = try container.decodeIfPresent(Int.self, forKey: .weight) ?? 0
         self.size = try container.decodeIfPresent(String.self, forKey: .size) ?? ""
         self.price = try container.decodeIfPresent(Double.self, forKey: .price) ?? 0.0
+        self.categoryId = try container.decodeIfPresent(Int.self, forKey: .categoryId) ?? 0
 
     }
 }

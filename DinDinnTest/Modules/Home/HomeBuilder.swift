@@ -11,12 +11,13 @@ import Moya
 class HomeBuilder {
     static func build() -> UIViewController {
         
-        let view = DinDinnStoryboard.home.intiateVC as! HomeViewController
+        let view = DinDinnStoryboard.home.intiateVC as! RootPageViewController
         let router = HomeRouter(viewController: view, submodules: (cartModule: CartBuilder.build, ()))
         let homeInteractor = HomeInteractor.shared
         let presenter = HomePresenter(router: router,
                                       useCases: (fetchOffers: homeInteractor.fetchOffers,
                                                  fetchMenuItems: homeInteractor.fetchMenuItems,
+                                                 fetchCategories: homeInteractor.fetchCategories,
                                                  addToCart: homeInteractor.addToCart,
                                                  fetchCartItems: homeInteractor.fetchCartItems))
         presenter.view = view

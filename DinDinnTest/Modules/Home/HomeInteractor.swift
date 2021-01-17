@@ -28,6 +28,10 @@ extension HomeInteractor {
         return self.service.fetchMenuItems()
     }
     
+    func fetchCategories() -> Observable<([Category]?)> {
+        return self.service.fetchCategories()
+    }
+    
     func fetchCartItems() -> [CartItem] {
         self.cartService.getItems()
     }

@@ -10,6 +10,7 @@ import Moya
 enum MenuEndpoint {
     case fetchOffers
     case fetchMenuItems
+    case fetchCategories
 }
 
 extension MenuEndpoint: TargetType {
@@ -30,13 +31,15 @@ extension MenuEndpoint: TargetType {
         case .fetchOffers:
             return "03365c0b-bc8c-4243-ab31-91397da37210"
         case .fetchMenuItems:
-            return "765425e0-86a2-4ed9-ab35-ce423bbfa211"
+            return "c7e86b2c-37c1-4951-b140-686a7cab616b"
+        case .fetchCategories:
+            return "19eaa32a-21e6-46cb-926e-8bc8ea67f004"
         }
     }
 
     var method: Moya.Method {
         switch self {
-        case .fetchOffers, .fetchMenuItems:
+        case .fetchOffers, .fetchMenuItems, .fetchCategories:
             return .get
         }
     }
@@ -51,7 +54,7 @@ extension MenuEndpoint: TargetType {
 
     var task: Task {
         switch self {
-        case .fetchOffers, .fetchMenuItems:
+        case .fetchOffers, .fetchMenuItems, .fetchCategories:
             return .requestPlain
         }
     }
